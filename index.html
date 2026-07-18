@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
+  <!-- Iron Osteo — Google Analytics (GA4), consent-gated -->
+<script>
+(function () {
+  var GA_ID = 'G-3VQNPCQ083';
+  var COOKIE_NAME = 'io_cookie_consent';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  if (getCookie(COOKIE_NAME) === 'accepted') {
+    loadGA();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var acceptBtn = document.getElementById('io-cookie-accep
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Iron Osteo | Luke Sanders - Osteopath &amp; Strength Coach London</title>
