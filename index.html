@@ -226,7 +226,7 @@ footer{background:var(--black);padding:2rem 3rem;display:flex;align-items:center
 .popup-right{padding:3rem 2.5rem;background:rgba(255,255,255,.03);display:flex;flex-direction:column;justify-content:center}
 @media(max-width:900px){
   nav{padding:.5rem 1.5rem}.nm,.nb{display:none}.nl img{height:64px}.hbtn{display:flex}
-  .hc{padding:0 1.8rem 4rem}.hh1{font-size:3.8rem}
+  .hc{padding:0 1.8rem 4rem;top:90px;max-width:none}.hh1{font-size:3.8rem}
   #about{grid-template-columns:1fr}.ai{height:90vw}.ai img{object-position:center 8%;content:url('about-luke-mobile.jpg')}.ab{padding:3rem 1.8rem}
   #sv{padding:4rem 1.5rem}.svh{flex-direction:column;align-items:flex-start}.svg{grid-template-columns:1fr}
   .ps{grid-template-columns:1fr;height:auto}.psi{height:55vw}
@@ -564,19 +564,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <!-- Iron Osteo cookie consent banner -->
-<div id="io-cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#111111; color:#F5F5F0; padding:20px; font-family:'DM Sans', Arial, sans-serif; font-size:14px; line-height:1.5; border-top:2px solid #C9A84C; box-shadow:0 -2px 12px rgba(0,0,0,0.3);">
-  <div style="max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;">
-    <p style="margin:0; flex:1; min-width:240px;">
+<style>
+  #io-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111111;color:#F5F5F0;padding:16px 20px;padding-bottom:calc(16px + env(safe-area-inset-bottom));font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.5;border-top:2px solid #C9A84C;box-shadow:0 -2px 12px rgba(0,0,0,0.3)}
+  #io-cookie-banner .io-cb-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  #io-cookie-banner p{margin:0;flex:1;min-width:200px}
+  #io-cookie-banner a{color:#C9A84C;text-decoration:underline}
+  #io-cookie-banner .io-cb-btns{display:flex;gap:8px;flex-shrink:0}
+  #io-cookie-banner button{font-family:'Rajdhani',Arial,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;cursor:pointer;border-radius:2px;padding:9px 16px;font-size:13px}
+  #io-cookie-decline{background:transparent;color:#F5F5F0;border:1px solid #F5F5F0}
+  #io-cookie-accept{background:#C9A84C;color:#111111;border:none}
+  @media(max-width:600px){
+    #io-cookie-banner{padding:14px 16px;padding-bottom:calc(14px + env(safe-area-inset-bottom));font-size:12.5px}
+    #io-cookie-banner .io-cb-inner{flex-direction:column;align-items:stretch;gap:12px}
+    #io-cookie-banner p{min-width:0}
+    #io-cookie-banner .io-cb-btns{width:100%}
+    #io-cookie-banner button{flex:1;padding:11px 12px}
+  }
+</style>
+<div id="io-cookie-banner">
+  <div class="io-cb-inner">
+    <p>
       We use cookies to improve your experience and understand how the site is used. By continuing, you agree to our use of cookies.
-      <a href="/privacy-policy.html" style="color:#C9A84C; text-decoration:underline;">Learn more</a>
+      <a href="/privacy-policy.html">Learn more</a>
     </p>
-    <div style="display:flex; gap:10px; flex-shrink:0;">
-      <button id="io-cookie-decline" style="background:transparent; color:#F5F5F0; border:1px solid #F5F5F0; padding:10px 18px; font-family:'Rajdhani', Arial, sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; cursor:pointer; border-radius:2px;">
-        Decline
-      </button>
-      <button id="io-cookie-accept" style="background:#C9A84C; color:#111111; border:none; padding:10px 18px; font-family:'Rajdhani', Arial, sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; cursor:pointer; border-radius:2px;">
-        Accept
-      </button>
+    <div class="io-cb-btns">
+      <button id="io-cookie-decline">Decline</button>
+      <button id="io-cookie-accept">Accept</button>
     </div>
   </div>
 </div>
