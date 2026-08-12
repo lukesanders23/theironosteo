@@ -101,7 +101,26 @@
   .site-foot a { color: rgba(245,245,240,0.55); text-decoration: none; transition: color 0.2s; }
   .site-foot a:hover { color: #C9A84C; }
 
+  /* Q&A */
+  .qa { background: #111111; padding: 64px 40px 72px; border-top: 1px solid rgba(245,245,240,0.08); }
+  .qa-inner { max-width: 760px; margin: 0 auto; }
+  .qa-tag { display: flex; align-items: center; gap: 14px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C9A84C; margin-bottom: 14px; }
+  .qa-tag .line { width: 36px; height: 2px; background: #C9A84C; }
+  .qa h2 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.01em; text-transform: uppercase; color: #F5F5F0; margin-bottom: 32px; }
+  .qa-item { border-top: 1px solid rgba(245,245,240,0.12); }
+  .qa-item:last-child { border-bottom: 1px solid rgba(245,245,240,0.12); }
+  .qa-q { width: 100%; background: none; border: none; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 4px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 0.01em; color: #F5F5F0; transition: color 0.2s; }
+  .qa-q:hover { color: #C9A84C; }
+  .qa-icon { flex-shrink: 0; width: 26px; height: 26px; position: relative; }
+  .qa-icon::before, .qa-icon::after { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 2px; background: #C9A84C; transform: translate(-50%,-50%); transition: transform 0.3s; }
+  .qa-icon::after { transform: translate(-50%,-50%) rotate(90deg); }
+  .qa-item.open .qa-icon::after { transform: translate(-50%,-50%) rotate(0); }
+  .qa-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .qa-a-inner { padding: 0 4px 24px; font-size: 15.5px; line-height: 1.75; color: rgba(245,245,240,0.65); }
+  .qa-a-inner strong { color: #F5F5F0; font-weight: 500; }
+
   @media (max-width: 600px) {
+    .qa { padding: 48px 24px 56px; }
     .nav { padding: 0 24px; }
     .hero { padding: 48px 24px 40px; }
     .body { padding: 48px 24px 64px; }
@@ -175,6 +194,39 @@
     </div>
   </div>
 </article>
+
+<section class="qa">
+  <div class="qa-inner">
+    <div class="qa-tag"><span class="line"></span>Questions &amp; Answers</div>
+    <h2>Common Questions</h2>
+
+    <div class="qa-item">
+      <button class="qa-q">If it's not my programme, why aren't my glutes growing?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">It might not be your programme, your effort, or your exercise selection. More likely you don't have access to <strong>internal rotation and medial foot loading</strong>, so you're training on a compromised base — you can pick the right exercises and still fail to recruit the glutes if you can't execute them well.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">What does my foot have to do with glute growth?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">It starts at the floor. If you can't access a functional foot tripod — heel, 1st metatarsal and 5th metatarsal — and load the <strong>1st metatarsal</strong>, the tibia stays externally rotated, the femur follows, and the pelvis settles into an externally-rotated position. That limits the internal rotation glute training depends on.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Isn't glute training about external rotation?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Not the full picture. Most lower-body movements need the ability to <strong>accept internal rotation</strong> to stretch and eccentrically load the glute before transitioning into extension. Hinges like RDLs and deadlifts are heavily internal-rotation dependent — without that space, the glutes can't be worked through their full range.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Why do I feel it in my hamstrings or lower back instead of my glutes?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">When the conditions for internal rotation aren't there — femoral IR, a pelvic position that allows it, and a foot that can accept medial load — the body takes the path of least resistance. That's why so many people feel their hamstrings or lower back in movements that should load the glutes, and why reps never quite "finish." It's a <strong>system problem, not a muscle problem</strong> — the glutes aren't the villain.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">So what actually fixes it?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Fix the foundation: restore the ability to use the whole foot, regain access to internal rotation, and allow the pelvis and femur to move properly. Once that's in place, the glutes don't need more exercises — they finally get the position to do their job.</div></div>
+    </div>
+
+  </div>
+</section>
 
 <div class="footer-cta">
   <p>Want to know what's actually limiting your movement? Book a clinical assessment — we find the root and fix it.</p>
@@ -265,6 +317,26 @@
       banner.style.display = 'none';
     });
   }
+})();
+</script>
+<script>
+(function () {
+  var items = document.querySelectorAll('.qa-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.qa-q');
+    var ans = item.querySelector('.qa-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.qa-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
 })();
 </script>
 </body>
