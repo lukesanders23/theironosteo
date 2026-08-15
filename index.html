@@ -262,6 +262,17 @@ footer{background:var(--black);padding:2rem 3rem;display:flex;align-items:center
   .dawn-banner:hover .dawn-banner-text>div:nth-child(2){color:var(--off)!important}
   .dawn-banner:hover .dawn-banner-text>p{color:rgba(255,255,255,.4)!important}
 }
+
+/* Contact — desktop only: left "Ready to Start" panel matches the light form panel. Phone stays dark. */
+@media(min-width:901px){
+  .ctl{background:var(--off)}
+  .ctl .stag{color:var(--gold2)}
+  .ctl .stag::before{background:var(--gold2)}
+  .ctl .sh{color:var(--dark)}
+  .ctl .cti{color:var(--mid)}
+  .ctl .ctd{color:#4a4843}
+  .ctl .ctdi{border-color:rgba(0,0,0,.14);color:var(--gold2)}
+}
 </style>
 </head>
 <body>
