@@ -249,6 +249,19 @@ footer{background:var(--black);padding:2rem 3rem;display:flex;align-items:center
   .popup-left{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);padding:2rem 1.5rem}
   .popup-right{padding:2rem 1.5rem}
 }
+/* DAWN banner — desktop only: white by default, dark on hover (matches service cards). Phone stays dark. */
+@media(min-width:901px){
+  .dawn-banner{background:#fff;transition:background .3s}
+  .dawn-banner:hover{background:var(--dark)}
+  .dawn-banner .dawn-banner-divider{background:rgba(0,0,0,.12)}
+  .dawn-banner:hover .dawn-banner-divider{background:rgba(200,169,110,.2)}
+  .dawn-banner .dawn-banner-text>div:first-child{color:var(--gold2)!important}
+  .dawn-banner .dawn-banner-text>div:nth-child(2){color:var(--dark)!important}
+  .dawn-banner .dawn-banner-text>p{color:var(--mid)!important}
+  .dawn-banner:hover .dawn-banner-text>div:first-child{color:rgba(200,169,110,.65)!important}
+  .dawn-banner:hover .dawn-banner-text>div:nth-child(2){color:var(--off)!important}
+  .dawn-banner:hover .dawn-banner-text>p{color:rgba(255,255,255,.4)!important}
+}
 </style>
 </head>
 <body>
