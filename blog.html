@@ -202,7 +202,7 @@
   /* ── GRID ── */
   .article-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3px;
   }
 
@@ -403,7 +403,7 @@
   <div class="article-grid" id="articleGrid">
 
     <!-- POST 2 — The Missing Movement (newest) -->
-    <article class="card featured" data-cat="back-pain biomechanics rehab">
+    <article class="card" data-cat="back-pain biomechanics rehab">
       <div class="card-body">
         <span class="card-cat">Back Pain / Biomechanics</span>
         <h2 class="card-title">The Missing Movement Behind Your Back Pain</h2>
