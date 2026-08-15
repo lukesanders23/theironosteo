@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Iron Osteo — Google Analytics (GA4), consent-gated -->
+<script>
+(function () {
+  var GA_ID = 'G-3VQNPCQ083';
+  var COOKIE_NAME = 'io_cookie_consent';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  if (getCookie(COOKIE_NAME) === 'accepted') {
+    loadGA();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var acceptBtn = document.getElementById('io-cookie-accept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', loadGA);
+    }
+  });
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Missing Movement Behind Your Back Pain | The Iron Osteo</title>
+<meta name="description" content="Across two systematic reviews, the movement that keeps turning up with low back pain isn't a spinal movement — it's hip internal rotation. How to test it, and what it does to your training.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://theironosteo.com/the-missing-movement-behind-your-back-pain.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Iron Osteo">
+<meta property="og:url" content="https://theironosteo.com/the-missing-movement-behind-your-back-pain.html">
+<meta property="og:title" content="The Missing Movement Behind Your Back Pain">
+<meta property="og:description" content="Lose hip internal rotation and your lumbar spine starts doing a job it wasn't built for. Two systematic reviews, and two tests you can run now.">
+<meta property="og:image" content="https://theironosteo.com/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: #111111; color: #F5F5F0; }
+
+  /* NAV */
+  .nav { background: #111111; padding: 0 40px; height: 96px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo img { height: 72px; width: auto; display: block; mix-blend-mode: screen; }
+  .nav-back { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A84C; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .nav-back:hover { color: #F5F5F0; }
+  .nav-back::before { content: '←'; font-size: 14px; }
+
+  /* HERO */
+  .hero { background: #111111; padding: 72px 40px 56px; border-bottom: 1px solid #C9A84C; }
+  .hero-inner { max-width: 800px; margin: 0 auto; }
+
+  /* TAG LINE STYLE (matches screenshot) */
+  .tag-line { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .tag-line::before { content: ''; display: block; width: 40px; height: 2px; background: #C9A84C; flex-shrink: 0; }
+  .tag-line span { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A84C; }
+
+  .meta { font-size: 13px; color: #888888; margin-top: 22px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .hero h1 { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 52px); line-height: 1.08; color: #F5F5F0; max-width: 760px; text-transform: uppercase; }
+  .intro { font-size: 18px; color: #BBBBBB; line-height: 1.7; margin-top: 22px; max-width: 680px; }
+
+  /* BODY */
+  .body { background: #F5F5F0; padding: 64px 40px 80px; }
+  .body-inner { max-width: 720px; margin: 0 auto; }
+  .body-inner p { font-size: 16px; line-height: 1.9; color: #1A1917; margin: 0 0 24px; }
+  .body-inner h2 { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 22px; color: #C9A84C; margin: 52px 0 16px; text-transform: uppercase; letter-spacing: 0.04em; border-left: 3px solid #C9A84C; padding-left: 14px; }
+
+  .body-inner .ref { font-size: 13.5px; color: #555555; line-height: 1.7; margin: 0 0 12px; }
+  .body-inner .bio { font-size: 14px; color: #555555; line-height: 1.75; margin-top: 30px; padding-top: 26px; border-top: 1px solid #D5D2CA; }
+
+  /* CALLOUT */
+  .callout { background: #111111; color: #F5F5F0; border-left: 3px solid #C9A84C; padding: 22px 26px; margin: 36px 0; border-radius: 0 4px 4px 0; }
+  .callout p { color: #F5F5F0; margin: 0; font-size: 16px; line-height: 1.8; }
+
+  /* FOOTER CTA */
+  .footer-cta { background: #111111; color: #F5F5F0; padding: 48px 40px; text-align: center; border-top: 1px solid #C9A84C; }
+  .footer-cta p { font-size: 17px; line-height: 1.8; color: #BBBBBB; max-width: 560px; margin: 0 auto 24px; }
+  .footer-cta a { display: inline-block; background: #C9A84C; color: #111111; font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 3px; }
+  .footer-cta a:hover { background: #b8943e; }
+
+  /* SITE FOOTER */
+  .site-foot { background: #111111; padding: 22px 40px; display: flex; align-items: center; justify-content: center; gap: 8px 18px; flex-wrap: wrap; font-family: 'DM Sans', Arial, sans-serif; font-size: 12px; color: rgba(245,245,240,0.3); }
+  .site-foot a { color: rgba(245,245,240,0.55); text-decoration: none; transition: color 0.2s; }
+  .site-foot a:hover { color: #C9A84C; }
+
+  /* Q&A */
+  .qa { background: #111111; padding: 64px 40px 72px; border-top: 1px solid rgba(245,245,240,0.08); }
+  .qa-inner { max-width: 760px; margin: 0 auto; }
+  .qa-tag { display: flex; align-items: center; gap: 14px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C9A84C; margin-bottom: 14px; }
+  .qa-tag .line { width: 36px; height: 2px; background: #C9A84C; }
+  .qa h2 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.01em; text-transform: uppercase; color: #F5F5F0; margin-bottom: 32px; }
+  .qa-item { border-top: 1px solid rgba(245,245,240,0.12); }
+  .qa-item:last-child { border-bottom: 1px solid rgba(245,245,240,0.12); }
+  .qa-q { width: 100%; background: none; border: none; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 4px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 0.01em; color: #F5F5F0; transition: color 0.2s; }
+  .qa-q:hover { color: #C9A84C; }
+  .qa-icon { flex-shrink: 0; width: 26px; height: 26px; position: relative; }
+  .qa-icon::before, .qa-icon::after { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 2px; background: #C9A84C; transform: translate(-50%,-50%); transition: transform 0.3s; }
+  .qa-icon::after { transform: translate(-50%,-50%) rotate(90deg); }
+  .qa-item.open .qa-icon::after { transform: translate(-50%,-50%) rotate(0); }
+  .qa-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .qa-a-inner { padding: 0 4px 24px; font-size: 15.5px; line-height: 1.75; color: rgba(245,245,240,0.65); }
+  .qa-a-inner strong { color: #F5F5F0; font-weight: 500; }
+
+  @media (max-width: 600px) {
+    .qa { padding: 48px 24px 56px; }
+    .nav { padding: 0 24px; }
+    .hero { padding: 48px 24px 40px; }
+    .body { padding: 48px 24px 64px; }
+    .footer-cta { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav"><a class="nav-logo" href="https://theironosteo.com"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABpKADAAQAAAABAAAA/AAAAAD/wAARCAD8AaQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwADAwMDAwMFAwMFBwUFBQcJBwcHBwkMCQkJCQkMDgwMDAwMDA4ODg4ODg4OERERERERFBQUFBQWFhYWFhYWFhYW/9sAQwEDBAQGBQYKBQUKFxANEBcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcX/90ABAAb/9oADAMBAAIRAxEAPwD8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Q/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/0fyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9L8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//T/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/1PyqooooAKKKKACiiigAooooAKKKKANjw7aQX/iDTrG6XdFPdQxSLnGVdwCMj2Nf0Sv+zl8BzaG0/wCEJ0XZ5ezItI92MY+/jdn3znvnNfiN+zz8DPHnxh8Y2cvhu28rTdOuYZbzUJgRbxBGDbQf45CBwi89zgc1/RGRkEetAH8tOsW8Vpq15awDbHFPIiDrhVYgfpWdXvXx9+Bnjz4NeLLiPxRbeZYX08klnqEIJt51Zi2N38LgHlG5HUZHNeC0AFFFFABRRRQB1g8B+N20H/hKV0LUDpGzzPtwtZfs+wHG7zduzbnjOcVRsPC3ifVdOm1fTNKvbqyt93m3ENvJJDHtG5tzqpVcDk5PAr9lbH/lHy3/AGK0382rmP2P/wDk0DxT/v6z/wCkq0Afkz4e8F+MPFombwto19qot9olNnbyThN2cbtinGcHGa5+4t57SeS1uo2imiYpJG4KsjKcFWB5BB4INfrV/wAE0/8AkWvGn/X5Zf8AouWvzU+L/wDyVjxf/wBhzUf/AEokoAz9N+G3xE1ixi1PSPDeq3lrON0c8FlNJG46ZVlQgjPoa5/WdC1vw7enTfEFhc6ddBQ/k3UTwybW6Ha4BwexxX9D/wCzN/yQDwR/2B7f/wBBr8v/APgol/yXGx/7Adt/6OnoA+LtC8H+LfFCyv4a0e+1RYCBIbO2knCFugYxqcZ7Zrf/AOFR/FX/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/wD1z0/+c9flrXsHwk+OnxD+CVzf3XgK6hgOppGlws8KzK3lElCA3QjcenrQB9xf8FLv+Qv4I/64ah/6FBX5e1698W/jl8QvjbeWF749uoZ20yOSO3WCFYVUSkFyQvUnaOvpXkNAH6X/APBOb4jaTo/iDX/hzqk6QTawIbuxDnHmSwBlkjX/AGijBgO4U190/Hf9mLwF8fZrHUPEc93Yahp8bQxXNmygmJju2OrqykA5IPBGTX891rdXNlcx3llK8E8LB45I2KOjKchlYYIIPQivqXw7+2r+0V4ds1sU8Qi/jQAKb63inkwPWQqHb6kk0AfcP/Dtv4a/9DNrH/fNv/8AG6P+Hbfw1/6GbWP++bf/AON18g/8N7/tE/8AP/p//gDHR/w3v+0T/wA/+n/+AMdAFn9qD9nHQ/2a7jwvrnhbVrvUWvriZit2qAo9qY3UqUC8HdyCO3Wv2S8E+LPDXxZ8AWXiTTHjvNN1q0xKmcgeYu2WFx2ZSSrCv5/vi58fviT8bl0+Px7dwzx6WZTbpBAkIDTbd5O3kkhR1PFYfw7+MvxN+FM0kvgLXLnTUmYNLApEkEhHdopAyE474z70AfqbqX/BOL4UXV7LcWGu6xZwOxKQgwyBAf4QzR7iB781S/4dt/DX/oZtY/75t/8A43Xx9H+3p+0UiBW1Gwcju1jFk/lgU/8A4b3/AGif+f8A0/8A8AY6AP0p+CP7IHw6+B/iV/F+k3l9qmp+S8EUl4yBYUk4cqkaL8xHGSTwT614l/wUU+Imk2HgHTPhrBOr6nqd4l7NEpy0dtbhsMw7b5CNueu0+lfF2rftyftGaratarrkFmHGC9tZwo/4MVYj8K+W9c13WvE2qT634hvZ9Qvrlt8txcO0kjn3ZiT9PSgDJooooAKKKKACiiigAooooA//0vyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9P8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//U/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/1fyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9b8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z" alt="The Iron Osteo"></a><a class="nav-back" href="/blog.html">Field Notes</a></nav>
+
+<article>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="tag-line"><span>Back Pain / Biomechanics</span></div>
+      <h1>The Missing Movement Behind Your Back Pain</h1>
+      <p class="intro">You've been scanned, mobilised, stretched and strengthened. Nobody has tested your hips.</p>
+      <p class="meta">Field Notes &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; 5 min read</p>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="body-inner">
+
+      <p>Across two systematic reviews, that's the movement that keeps turning up alongside low back pain. And it isn't a spinal movement at all. It's hip internal rotation. Lose it, and your lumbar spine starts doing a job it wasn't built for. Every rep.</p>
+
+      <h2>This Isn't Just a Clinical Hunch</h2>
+
+      <p>In 2024, Pizol and colleagues published a systematic review of hip biomechanics in people with non-specific low back pain — 54 observational studies, screened from 338 articles, covering range of motion, kinematics, strength and muscle activation. Most rated moderate on their appraisal tool, a handful high, none poor — though moderate there means mid-range, not near the top of it.</p>
+
+      <p>The single most consistent finding across the whole body of work: total hip rotation is reduced in people with low back pain, and internal rotation is the most restricted direction of all. One included study found the reverse in people with acute pain. That's the exception.</p>
+
+      <p>Five years earlier, Avman and colleagues had run a narrower review looking only at hip range of motion, across six databases. Their conclusion landed in the same place: of every direction they examined, internal rotation was the one that mattered — the main direction worth assessing in someone with non-specific low back pain.</p>
+
+      <p>Two research groups, different databases, five years apart, same movement. That's worth something. It isn't proof.</p>
+
+      <p>Avman graded the evidence behind their own finding very low quality and said the association should be viewed with caution. That matters, because the two reviews aren't equal weight. Pizol is broad — it maps what's been measured. Avman looked hardest at this exact question and came away unconvinced.</p>
+
+      <p>And every study in both is observational. They can show that the restriction and the pain turn up together. None of them can show which arrived first.</p>
+
+      <p>The obvious challenge is that pain makes people guard, and guarding costs range — so the restriction could be the consequence rather than the cause. That's a fair reading, and the data can't rule it out. What it doesn't explain is the number of people I test who have the restriction and no pain at all. They're not guarding anything. It's already there, waiting, however it does in my experience go hand in hand with increased compression.</p>
+
+      <p>And here's where I'll go further than the research does, and say so plainly. Nobody in those 54 studies was loaded. They were measured on plinths and in gait labs, moving at their own pace. My position — from clinic, not from the literature — is that a restricted hip magnifies spinal compensations with movement requiring IR at the hip and even more so when you put weight on it. Add a bar and a hinge, and the range has to come from somewhere. That's when the lumbar spine makes up the difference, and when the restriction stops being a finding and starts being a cause.</p>
+
+      <p>That's a claim about mechanism, and the reviews neither support it nor test it. Take it as clinical reasoning, and test the restriction yourself.</p>
+
+      <h2>The Rest of What They Found</h2>
+
+      <p>Range of motion was one of four categories. The other three are more interesting.</p>
+
+      <p><strong>Strength:</strong> hip abductors and extensors test weak in people with low back pain, in isolated testing and in functional tasks alike.</p>
+
+      <p><strong>Muscle activation:</strong> the same population shows greater glute max and hamstring activation than healthy controls, with increased posterior sling activity during hip extension.</p>
+
+      <p>Read those two together. Weak on testing, working harder in life. The activation findings are mixed across studies, but that combination is what I see in clinic constantly — a muscle already ‘on’, holding a position rather than producing movement.</p>
+
+      <p><strong>Kinematics:</strong> altered lumbopelvic motion, slower execution of everyday tasks, and modified joint coordination under repetitive lifting. Read together, that's a system organised around not moving the painful segment.</p>
+
+      <h2>IR and ER Are Not Opposites</h2>
+
+      <p>Internal and external rotation aren't two movements the hip picks between. Both are available at once, and the only question is how much of each you've got.</p>
+
+      <p>When enough compression builds up within and around the hip joint — reducing joint space — rotation in both directions becomes restricted. Both reviews found exactly that, incidentally: external rotation was also reduced, just less consistently than internal.</p>
+
+      <h2>Test It Now — Two Simple Checks</h2>
+
+      <p><strong>Seated hip internal rotation.</strong> Sit on the edge of a chair, hips and knees at 90 degrees, feet flat. Without moving your knee, let one foot swing outward — that's the femur rotating inward. You're looking for roughly 35–45 degrees each side. Test both, and note any real difference between them.</p>
+
+      <p><strong>Prone hip internal rotation.</strong> Lie face down, knees bent to 90 degrees. Let both feet fall outward together. Same target range. If your feet barely move from vertical, or one side drops noticeably less than the other, you have your answer.</p>
+
+      <p>If both are limited and your lower back is the thing that keeps complaining, that's not a coincidence to ignore.</p>
+
+      <h2>What It Does to Your Training</h2>
+
+      <p>In a hinge in particular, you need hip internal rotation. Without it, the range comes from the lumbar spine instead.</p>
+
+      <p>It's also why "strengthen your glutes" so rarely fixes a back. Those muscles are already working overtime. Loading them harder entrenches the position.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>Loss of hip internal rotation is close to universal in people who train hard, and it travels with low back pain often enough that two reviews landed on it.</p>
+
+      <p>It isn't a flexibility problem, which is why the stretch you've been doing for two years hasn't touched it. It isn't a strength problem either — the muscles involved are already working overtime. It's a pressure and position/centre of mass problem.</p>
+
+      <p>Run the two tests. If you're restricted, you now know something about your back pain that you can address.</p>
+
+      <p>What changes it is position/centre of mass, breath and load, in that order — and which positions depends entirely on how you're built and what you're currently compensating with. Get that wrong and nothing moves. Get it right and the test can change inside a session.</p>
+
+      <p>That part is an assessment, not an article. It's what I spend my time on week after week, in the clinic and in the programmes I write. Give the hip its range back and the spine stops covering for it.</p>
+
+      <h2>References</h2>
+
+      <p class="ref">Pizol GZ, Miyamoto GC, Cabral CMN. Hip biomechanics in patients with low back pain, what do we know? A systematic review. BMC Musculoskeletal Disorders. 2024;25(1):415.</p>
+
+      <p class="ref">Avman MA, Osmotherly PG, Snodgrass S, Rivett DA. Is there an association between hip range of motion and nonspecific low back pain? A systematic review. Musculoskeletal Science and Practice. 2019;42:38–51.</p>
+
+      <p class="bio">Luke Sanders is an osteopath and strength coach based at UNTIL, 111 Charing Cross Road, London. He works with lifters, athletes and people who want to train without paying for it later.</p>
+
+    </div>
+  </div>
+</article>
+
+<section class="qa">
+  <div class="qa-inner">
+    <div class="qa-tag"><span class="line"></span>Questions &amp; Answers</div>
+    <h2>Common Questions</h2>
+
+    <div class="qa-item">
+      <button class="qa-q">I've tried everything to solve my back pain — what else could be happening?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Ruling out anything non-mechanical comes first; that isn't a corner to cut. The research then points somewhere most assessments don't look. Across two systematic reviews of hip biomechanics in low back pain, <strong>internal rotation</strong> is the direction that comes back most consistently reduced — more than flexion, more than extension, more than external rotation. Almost nobody tests it, because the attention goes to the spine.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">What has hip internal rotation got to do with my lower back?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">In a hinge in particular, you need it. If the hip won't rotate inward, the range still has to come from somewhere, and <strong>the lumbar spine supplies it</strong>. That's the trade you're making on every rep.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Which matters more for back pain — losing internal rotation or external rotation?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner"><strong>Internal rotation</strong>, on the evidence. It's the direction both reviews single out; external rotation came back reduced too, just less consistently. But the framing is off. They aren't opposites you pick between — both are available at once, and compression around the joint restricts both.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Why doesn't "strengthen your glutes" fix it?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Look at what the position is asking of them. If your centre of mass sits forward, something has to hold you there — often the glutes. Hip abductors and extensors test weak, while glute max and hamstrings show greater activation than healthy controls. <strong>Contracting to hold a position, not to produce movement.</strong> Load them harder in that same position and you entrench it. What changes them is changing what they're being asked to hold.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">So what actually fixes it?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner"><strong>Position, breath and load</strong>, in that order — and in practice it takes hands-on work and training together, not one or the other. Which positions depends entirely on how you're built and what you're currently compensating with. Get it wrong and nothing changes; get it right and the test can move inside a session. That's an assessment, not an article.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-cta">
+  <p>Want to know what's actually limiting your movement? Book a clinical assessment — we find the root and fix it.</p>
+  <a href="https://theironosteo.com">Book Now</a>
+</div>
+
+<footer class="site-foot">
+  <span>© 2025 theironosteo.com</span>
+  <span>·</span>
+  <a href="/blog.html">Field Notes</a>
+  <span>·</span>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<!-- Iron Osteo cookie consent banner -->
+<style>
+  #io-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111111;color:#F5F5F0;padding:16px 20px;padding-bottom:calc(16px + env(safe-area-inset-bottom));font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.5;border-top:2px solid #C9A84C;box-shadow:0 -2px 12px rgba(0,0,0,0.3)}
+  #io-cookie-banner .io-cb-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  #io-cookie-banner p{margin:0;flex:1;min-width:200px}
+  #io-cookie-banner a{color:#C9A84C;text-decoration:underline}
+  #io-cookie-banner .io-cb-btns{display:flex;gap:8px;flex-shrink:0}
+  #io-cookie-banner button{font-family:'Rajdhani',Arial,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;cursor:pointer;border-radius:2px;padding:9px 16px;font-size:13px}
+  #io-cookie-decline{background:transparent;color:#F5F5F0;border:1px solid #F5F5F0}
+  #io-cookie-accept{background:#C9A84C;color:#111111;border:none}
+  @media(max-width:600px){
+    #io-cookie-banner{padding:14px 16px;padding-bottom:calc(14px + env(safe-area-inset-bottom));font-size:12.5px}
+    #io-cookie-banner .io-cb-inner{flex-direction:column;align-items:stretch;gap:12px}
+    #io-cookie-banner p{min-width:0}
+    #io-cookie-banner .io-cb-btns{width:100%}
+    #io-cookie-banner button{flex:1;padding:11px 12px}
+  }
+</style>
+<div id="io-cookie-banner">
+  <div class="io-cb-inner">
+    <p>
+      We use cookies to improve your experience and understand how the site is used. By continuing, you agree to our use of cookies.
+      <a href="/privacy-policy.html">Learn more</a>
+    </p>
+    <div class="io-cb-btns">
+      <button id="io-cookie-decline">Decline</button>
+      <button id="io-cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var COOKIE_NAME = 'io_cookie_consent';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/; SameSite=Lax';
+  }
+
+  var consent = getCookie(COOKIE_NAME);
+  var banner = document.getElementById('io-cookie-banner');
+
+  if (!consent && banner) {
+    banner.style.display = 'block';
+  }
+
+  var acceptBtn = document.getElementById('io-cookie-accept');
+  var declineBtn = document.getElementById('io-cookie-decline');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'accepted', 180);
+      banner.style.display = 'none';
+      if (typeof window.dispatchEvent === 'function') {
+        window.dispatchEvent(new Event('io-cookie-accepted'));
+      }
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'declined', 180);
+      banner.style.display = 'none';
+    });
+  }
+})();
+</script>
+<script>
+(function () {
+  var items = document.querySelectorAll('.qa-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.qa-q');
+    var ans = item.querySelector('.qa-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.qa-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
