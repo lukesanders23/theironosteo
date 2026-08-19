@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Iron Osteo — Google Analytics (GA4), consent-gated -->
+<script>
+(function () {
+  var GA_ID = 'G-3VQNPCQ083';
+  var COOKIE_NAME = 'io_cookie_consent';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  if (getCookie(COOKIE_NAME) === 'accepted') {
+    loadGA();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var acceptBtn = document.getElementById('io-cookie-accept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', loadGA);
+    }
+  });
+})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Pelvis Isn't Out Of Place | The Iron Osteo</title>
+<meta name="description" content="Everyone is asymmetrical and that's normal. The problem isn't the position you're in — it's not being able to leave it.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://theironosteo.com/your-pelvis-isnt-out-of-place.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Iron Osteo">
+<meta property="og:url" content="https://theironosteo.com/your-pelvis-isnt-out-of-place.html">
+<meta property="og:title" content="Your Pelvis Isn't Out Of Place">
+<meta property="og:description" content="You've been clicked, released and 'realigned' — and it wore off. Why it happens, and what to do between appointments.">
+<meta property="og:image" content="https://theironosteo.com/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: #111111; color: #F5F5F0; }
+
+  /* NAV */
+  .nav { background: #111111; padding: 0 40px; height: 96px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo img { height: 72px; width: auto; display: block; mix-blend-mode: screen; }
+  .nav-back { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A84C; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .nav-back:hover { color: #F5F5F0; }
+  .nav-back::before { content: '←'; font-size: 14px; }
+
+  /* HERO */
+  .hero { background: #111111; padding: 72px 40px 56px; border-bottom: 1px solid #C9A84C; }
+  .hero-inner { max-width: 800px; margin: 0 auto; }
+
+  /* TAG LINE STYLE (matches screenshot) */
+  .tag-line { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .tag-line::before { content: ''; display: block; width: 40px; height: 2px; background: #C9A84C; flex-shrink: 0; }
+  .tag-line span { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A84C; }
+
+  .meta { font-size: 13px; color: #888888; margin-top: 22px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .hero h1 { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 52px); line-height: 1.08; color: #F5F5F0; max-width: 760px; text-transform: uppercase; }
+  .intro { font-size: 18px; color: #BBBBBB; line-height: 1.7; margin-top: 22px; max-width: 680px; }
+
+  /* BODY */
+  .body { background: #F5F5F0; padding: 64px 40px 80px; }
+  .body-inner { max-width: 720px; margin: 0 auto; }
+  .body-inner p { font-size: 16px; line-height: 1.9; color: #1A1917; margin: 0 0 24px; }
+  .body-inner h2 { font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 22px; color: #C9A84C; margin: 52px 0 16px; text-transform: uppercase; letter-spacing: 0.04em; border-left: 3px solid #C9A84C; padding-left: 14px; }
+
+  .body-inner .ref { font-size: 13.5px; color: #555555; line-height: 1.7; margin: 0 0 12px; }
+  .body-inner .bio { font-size: 14px; color: #555555; line-height: 1.75; margin-top: 30px; padding-top: 26px; border-top: 1px solid #D5D2CA; }
+
+  /* CALLOUT */
+  .callout { background: #111111; color: #F5F5F0; border-left: 3px solid #C9A84C; padding: 22px 26px; margin: 36px 0; border-radius: 0 4px 4px 0; }
+  .callout p { color: #F5F5F0; margin: 0; font-size: 16px; line-height: 1.8; }
+
+  /* FOOTER CTA */
+  .footer-cta { background: #111111; color: #F5F5F0; padding: 48px 40px; text-align: center; border-top: 1px solid #C9A84C; }
+  .footer-cta p { font-size: 17px; line-height: 1.8; color: #BBBBBB; max-width: 560px; margin: 0 auto 24px; }
+  .footer-cta a { display: inline-block; background: #C9A84C; color: #111111; font-family: 'Rajdhani', Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 3px; }
+  .footer-cta a:hover { background: #b8943e; }
+
+  /* SITE FOOTER */
+  .site-foot { background: #111111; padding: 22px 40px; display: flex; align-items: center; justify-content: center; gap: 8px 18px; flex-wrap: wrap; font-family: 'DM Sans', Arial, sans-serif; font-size: 12px; color: rgba(245,245,240,0.3); }
+  .site-foot a { color: rgba(245,245,240,0.55); text-decoration: none; transition: color 0.2s; }
+  .site-foot a:hover { color: #C9A84C; }
+
+  /* Q&A */
+  .qa { background: #111111; padding: 64px 40px 72px; border-top: 1px solid rgba(245,245,240,0.08); }
+  .qa-inner { max-width: 760px; margin: 0 auto; }
+  .qa-tag { display: flex; align-items: center; gap: 14px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #C9A84C; margin-bottom: 14px; }
+  .qa-tag .line { width: 36px; height: 2px; background: #C9A84C; }
+  .qa h2 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.01em; text-transform: uppercase; color: #F5F5F0; margin-bottom: 32px; }
+  .qa-item { border-top: 1px solid rgba(245,245,240,0.12); }
+  .qa-item:last-child { border-bottom: 1px solid rgba(245,245,240,0.12); }
+  .qa-q { width: 100%; background: none; border: none; cursor: pointer; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 4px; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 19px; letter-spacing: 0.01em; color: #F5F5F0; transition: color 0.2s; }
+  .qa-q:hover { color: #C9A84C; }
+  .qa-icon { flex-shrink: 0; width: 26px; height: 26px; position: relative; }
+  .qa-icon::before, .qa-icon::after { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 2px; background: #C9A84C; transform: translate(-50%,-50%); transition: transform 0.3s; }
+  .qa-icon::after { transform: translate(-50%,-50%) rotate(90deg); }
+  .qa-item.open .qa-icon::after { transform: translate(-50%,-50%) rotate(0); }
+  .qa-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .qa-a-inner { padding: 0 4px 24px; font-size: 15.5px; line-height: 1.75; color: rgba(245,245,240,0.65); }
+  .qa-a-inner strong { color: #F5F5F0; font-weight: 500; }
+
+  @media (max-width: 600px) {
+    .qa { padding: 48px 24px 56px; }
+    .nav { padding: 0 24px; }
+    .hero { padding: 48px 24px 40px; }
+    .body { padding: 48px 24px 64px; }
+    .footer-cta { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav"><a class="nav-logo" href="https://theironosteo.com"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABpKADAAQAAAABAAAA/AAAAAD/wAARCAD8AaQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwADAwMDAwMFAwMFBwUFBQcJBwcHBwkMCQkJCQkMDgwMDAwMDA4ODg4ODg4OERERERERFBQUFBQWFhYWFhYWFhYW/9sAQwEDBAQGBQYKBQUKFxANEBcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcX/90ABAAb/9oADAMBAAIRAxEAPwD8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Q/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/0fyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9L8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//T/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/1PyqooooAKKKKACiiigAooooAKKKKANjw7aQX/iDTrG6XdFPdQxSLnGVdwCMj2Nf0Sv+zl8BzaG0/wCEJ0XZ5ezItI92MY+/jdn3znvnNfiN+zz8DPHnxh8Y2cvhu28rTdOuYZbzUJgRbxBGDbQf45CBwi89zgc1/RGRkEetAH8tOsW8Vpq15awDbHFPIiDrhVYgfpWdXvXx9+Bnjz4NeLLiPxRbeZYX08klnqEIJt51Zi2N38LgHlG5HUZHNeC0AFFFFABRRRQB1g8B+N20H/hKV0LUDpGzzPtwtZfs+wHG7zduzbnjOcVRsPC3ifVdOm1fTNKvbqyt93m3ENvJJDHtG5tzqpVcDk5PAr9lbH/lHy3/AGK0382rmP2P/wDk0DxT/v6z/wCkq0Afkz4e8F+MPFombwto19qot9olNnbyThN2cbtinGcHGa5+4t57SeS1uo2imiYpJG4KsjKcFWB5BB4INfrV/wAE0/8AkWvGn/X5Zf8AouWvzU+L/wDyVjxf/wBhzUf/AEokoAz9N+G3xE1ixi1PSPDeq3lrON0c8FlNJG46ZVlQgjPoa5/WdC1vw7enTfEFhc6ddBQ/k3UTwybW6Ha4BwexxX9D/wCzN/yQDwR/2B7f/wBBr8v/APgol/yXGx/7Adt/6OnoA+LtC8H+LfFCyv4a0e+1RYCBIbO2knCFugYxqcZ7Zrf/AOFR/FX/AKFLW/8AwX3H/wARX6pf8E3gP+FW+Ij3Os/+28VfoXc3lpZRiW8mjgQnAaRgoz6ZJFAH80X/AAqP4q/9Clrf/gvuP/iKP+FR/FX/AKFLW/8AwX3H/wARX9J3/CQaD/0ELX/v8n+NH/CQaD/0ELX/AL/J/jQB/Nj/AMKk+Kv/AEKWt/8AgvuP/iK5jWPDPiTw84j1/TLzTmboLqCSEn6b1Ff08x65osziOK+t3djgKsqEk+wBpmt6BoniXTZdH8Q2UGoWc6lZILmNZY2B9VYEUAfy3UV9U/tdfA+w+CXxMFp4eVl0PWYTeWKMSxh+YrJDk8kI2CuedrDOTzXQ/se/s42fxv8AE13rXisOPDeiFPPRCVN1O/Kw7hyFAG5yOcYAxnIAPkbTdH1fWZvs+kWc97L/AHLeJpW/JQTXYL8Jvim4DL4T1og9/wCz7j/4iv6RvDfhTwz4P02PSPCum2umWkQCrFaxLEuB67QMn3PJrTk1LTonMctzCjDqGdQR+BNAH80//Co/ir/0KWt/+C+4/wDiKP8AhUfxV/6FLW//AAX3H/xFf0q/2vpX/P5B/wB/F/xo/tfSv+fyD/v4v+NAH8yGq+B/GuhRmbW9D1GxQdWubWWJfzdQK5ev6of9Hu4SPkmicYPRlYfyNfBH7WH7JXhDxZ4S1Hx74A06LTPEWmxPdSRWqCOK9jjG6RWjXCiXaCVYAEng5yCAD8Va6bRPBXjHxNC1x4c0XUNTiQ7We0tpZ1U+hKKQDXM1/TN8J/DuleFfhp4c0LRoEgtrfTbbCoMbmaNWdz6szEsT3JoA/nUufhb8TbOBrm78LaxDEgJZ3sJ1VQOpJKYArhOnBr+qevyR/bl/Zmi0WWX4z+ArQJZzMP7ZtIVwsMjHAuVUDhHPEno2G7nAB+Y1FFFAG9oXhXxP4okli8NaVeao8ADSLZwSTlAeAWEatgHtmrmt+BfG3hq1W+8R6FqOm27uI1lu7WWFC5BIUM6gZwDxmv0n/wCCaP3/ABv9NP8A/a9e7f8ABQX/AJIB/wBxiz/9BloA/DiiiigAooooAKKKKACiiigD/9X8qqKKKACiiigAooooAK7rWPhl8QPD/haw8bazol3a6LqgBtb14z5UgP3eR93d1XdjcORkVJ8Lf+EI/wCFh6GfiQ0ieHRdob8xgsfKHOCBztLYD4525xzX9H9mvgzxv4RjhsFstW8P39uEjRAktrLARgKAMrtA4x2x2xQB/MFX3Z+zV+xh4h+KZtvGPxAWbSPDBIeKP7l1fL1/dgj93Ef+ehGSPuj+IfeXhr9hz4LeG/iHJ44S3mvLRSJbTSLkiS1t5s5Lc/NIo42o+QO+7jH0R8R/ib4J+EfhmTxN40vUsrSMbYoxzLM4HEcMY5Zj6DgdSQOaANbSNH8H/DXwqunaVDa6JomlwlsDEUMUajLO7E/izMck8k5r46j/AG/vhM/xLPhMwzr4f/1I1w58vz843GLG8Qf7fXvtxzX53ftDftU+NfjpevpkZfSfDMT5g02N+ZMfde4Yf6x+4H3V7DPJ+WaAP6e9d0Hwf8S/Cz6VrVvba1oupxBsEiSKRGGVdGU9e6spyOoNfjR+0p+xn4j+E7XHi/wKJtY8LAl5Bjfc2KntKAPnjH/PQDj+IDqeH/Z2/at8Z/Ay8TSbkvq/hiV8zafI3zQ5PzPbMfuN3K/dbvg/MP29+HnxI8FfFnwxH4m8GXsd/ZTDbIh4kicjmOaM8ow7g9eoyOaAP5lq7rSvhj8QNb8J33jrSdEu7jQ9N/4+b5Iz5SY6nJ+8F/iK5298V+0evfsNfBXXfiKnjh7ea2smJludHgIS0mmzkNx8yIf4o1IBPTAyD9PaofBfgvwhNFqwstK8PWVs0UiSBIrWODGChXhdpBxtxznHOaAP5hKK7f4lDwYPHut/8K7aR/DxvJDp5lBDeSTkDB52g5C5524zzXEUAftnYc/8E+Wxz/xS036Fq5j9j/8A5NA8U/7+s/8ApKtR/sdfG34beKvg+nwW8fXlpbXllHPZG2vnWKK9spyzYRmIBIDlGXO7gEdePrvwV8OvhR4B8E3vgDwo8Vvo2om4aWI3ZkJ+0oEk2uzFgCo454oA+LP+CaYP/CNeMz/0+WX/AKLlr80/i/8A8lY8X/8AYc1D/wBKJK/bltd/Z5/ZK8BX0Wg3FpZqxa4FnHc/aLy8uNuFXBZnOcAZOFUc8c1+C2uatc69rV9rt5jz7+5luZMdN8zl2/U0Af0Qfszf8kA8Ef8AYHt//Qa/L/8A4KJf8lxsf+wHbf8Ao6ev1A/Zm/5IB4I/7A9v/wCg1+X/APwUS/5LjY/9gO2/9HT0AfUP/BN7/klniH/sNH/0nipf+CkJP/CqfDw/6ja/+k81J/wTe/5JZ4h/7DR/9J4q9W/bH+DXjb41+BdI8P8AgaO3kurPUxdSi4lEKiMQyJwSDk5YcUAfgpzRzX2r/wAMB/tDf8+um/8Agav/AMTR/wAMB/tDf8+um/8Agav/AMTQB8WxySROJImKMpyCpwQfYiv3x/Yo8Ya94z+AemXfiK5kvLmxubixWaVi0jRQsDHuY8kqrbcnnAFfnLB+wB+0FLKsckOlxKxwXa8BCj1IVCfyFfrL8APhKvwU+GGneBXuReXMLST3U6AhHnmbc2wHnavCjPJAyetAHw9/wUuhj+w+CLjaPM83UEz3xiA4/Ovcf2AtJg0/9n23vo1Ak1HUryeQ9yUYQjP0EdfLv/BSLxfY3/izwz4KtZFebS7We7uQDko10UCKfQ7Y92PQj1r65/YT/wCTb9F/6+r/AP8ASh6APM/+CgnxV8T+CvCeheEfC97Lp7a9LcPdzQMY5TBbhAIw64IDs+WweQMdCa/G6S8u5nMk00jsepZiSfxJr9O/+Cl3/IU8E/8AXC//APQoa/LugCXz5/8Ano35mjz5/wDno35moqKAPqb9lD4ueLfAvxi8P6Zb6jO2k6xexWF5ZvIzQutwwjDbCcB0Yhgw54x0Jr9/5I0ljaKQBlcFWB6EHqK/mm+C3/JX/B3/AGHNP/8AShK/pboA/l98aabFo3jHWtIhGI7LULq3X/dilZR+gr+l3wX/AMidov8A2D7X/wBFLX823xP/AOSleKP+wxf/APpQ9f0k+C/+RO0X/sH2v/opaAPzD8RftGap8EP2xfFUOsTzXHhfUp7SG/tyxcQD7PFtniU5w0eTuA+8pI64x+pf/El8U6J/yx1DTNTt/aSGeCZfyZXU/iDX4E/tj/8AJyPi7/rtb/8ApNFX09+wr+0p/ZN3B8E/G9z/AKHcuRotzKeIpWOTasT0VySY/Rvl/iGAD5s/aq/Z6vPgX42L6Yjy+GdXZpdNnOT5Z6tbu39+PPyk/eXB65x8s1/TJ8VPhn4b+Lngi/8AA/iePNvdrmOVQDJbzL/q5YyejKfzGQeCa/na+J3w38SfCfxrf+CPFEWy6sn+SQA+XPE33JYyeqOOR6HIPINAH6Jf8E0fv+N/pp//ALXr3b/goL/yQD/uMWf/AKDLXhP/AATR+/43+mn/APtevdv+Cgv/ACQD/uMWf/oMtAH4cUUUUAFFFFABRRRQAUUUUAf/1vyqooooAKKKKACiiigAr6W/Zq+OXxB+FvjnStF8PXpk0nVr+3trvT58vbsJpFQuq5+SQA8MuM98jivmmu2+Gn/JR/DP/YXsf/R6UAf013Mpht5ZlGSiMwz7DNfzcfEDx78Qfjl8QEufEt419qF5crZ2cGdkEPmyBEjiUnai5Iyep6sSea/pDv8A/jxuP+uT/wAjX8yfhbVbTQfH+la5flhbWGq29zMVG5vLhnV2wO5wDgUAfTX/AAwZ+0X/ANAyx/8AA6L/ABpP+GDP2i/+gZY/+B0P+NfotB+3f+zzczx20WoX5eRgi/6DL1Y4FfY4ORmgD8Iv+GDP2i/+gZY/+B0P+NeIfDD4kePvgt47W/8ACt41ndR3Atru3J3wTqr7WjlTO1xnOD1HVSDX7E337dP7PmnXs+n3WoXwltpHicCykI3ISpwfqK/EG/voNT8Yz6lbZ8q61B5k3DB2ySlhkeuDQB/T9E5kiRz1ZQfzr+ej9o344/EH4reNtS03xJelNL0u9ngtNPgylvGIpGQOVz88hA5Zsn0wOK/oUt/+PeP/AHF/lX8xnxA/5HzxD/2FLz/0c9AHI0UUUAfqX8F/2Fvhx8R/hboHjjWda1aG71a1FxLHA0IjUlmGFDRMcADua9R/4dxfCj/oYNc/77t//jNfktpvxH+IWjWUWmaR4j1WztYRiOCC9mjjQE5wqq4AGTngV+wf7JfiPxDrX7LGtaxrOo3V7fJJqu25uJnlmXZCCuHYlhtPI54oAxP+HcPwmPXX9c/77t//AIzX5GeN9Bg8LeM9b8M20jTRaXqF1ZpI4AZ1glaMMwHGSFycVs/8La+Kn/Q263/4MLj/AOOVwc001zM9xcO0ssrF3dyWZmY5JJPJJPJJoA/ov/Zm/wCSAeCP+wPb/wDoNfl//wAFEv8AkuNj/wBgO2/9HT1+oH7M3/JAPBH/AGB7f/0Gvy//AOCiX/JcbH/sB23/AKOnoA+of+Cb3/JLPEP/AGGj/wCk8VfWHxo+N3hH4F6DZ+IvGEV3NbX119kjFnGsjiQoz5IZ0AGFPevk/wD4Jvf8ks8Q/wDYaP8A6TxUv/BSH/klXh7/ALDY/wDSeagDf/4eI/A3/ny1v/wGi/8Aj1J/w8R+Bv8Az5a3/wCA0X/x6vxLooA/pn+GPxN8KfFvwjbeM/B05ms7gsjJIAssMicNHIoJ2sOuMnIII4IrwL9rT43fE/4JeG7bWPBWiW11Y3mYJdTmZpPsc7fcDQgAEMPusWxu4I6Z/Lf9lj9oO++Bfjhf7Rd5fDWrMsWpQDnZ2W4Rf78eef7y5HXGP3e1TTPC/wARPCcum36Q6routWuCMh4poJVyrKR6ggqw5BwRzQB/M14k8R654v1y78S+JbuS+1G+kMs88pyzsf0AA4AHAGAOK/cP9g25in/Zz0uKM5aC9vo39mMxf+TCvyk/aO+A2s/AfxzJo0u+40W9LTaXeEf62LPKORwJY84Yd+GHBFfXX/BPX4zaRos2o/CHxBcrbNqM4vdLaRtqvMVCSwgnjcwVWQd8MOuMgHQf8FK9EvJLPwb4iRGa2he8tZHA4V5BE6An/aCNj6Gvyir+oXxV4S8NeONEn8N+LtPg1PTrjHmQTruUkcgjurDswII7Gvmef9hn9m+eVpRoM8e452pfXIUfQeZQB+CVFfvP/wAMKfs3/wDQEuv/AAPuP/i6P+GFP2b/APoCXX/gfcf/ABdAH4+/s86Je+IPjh4N06wQvJ/a9rM2BnEcDiV2PsqqSa/pCrxz4a/AH4SfCS4e+8C6FFZ3kiGNrp2eefYeqiSVmKg9wuM96o/tCfGDRfgz8NtR8RX06LqM8LwaZb7v3k106kJgddqE7nPYD1IyAfz9/EW4iu/iD4ju4Tujm1W9dSO6tO5H6V/Sh4L/AORO0X/sH2v/AKKWv5gJJHlkaWQlnclmJ6knkmv6f/Bf/InaL/2D7X/0UtAH4Mftj/8AJyPi7/rtb/8ApNFXzPHJJDIs0LFHQhlZTggjkEEdCK+mP2x/+TkfF3/Xa3/9Joq+ZKAP3V/Y7/aQj+MXhX/hFPFE4/4SrRYlExY4N5bjCrOPVhwsg9cN/FgdJ+1f+zvafHHwUbvSI0j8UaOjSafKcDzl6tbOf7r/AMBP3X56Fs/hl4G8beIfh14rsPGXha4NtqGnSiSNuqsOjI4/iR1JVh3Br+iD4J/F/wAPfGzwHaeMtCIjlYeVe2pOXtrlQN8beo7q38SkH1FAHwb/AME3bO70++8e2F/E8FxbtYxSxSAq6OhuAysDyCCMEV7b/wAFBf8AkgH/AHGLP/0GWvrbRvA/hPw9r+reKdF06K01LXWibUJ48g3DQghGYZ25AJyQAT1OTXyJ/wAFCJo4/gGkbsA0ms2gUdyQkpP6CgD8PaKKKACiiigAooooAKKKKAP/1/yqooooAKKKKACiiigArtfht/yUXw1/2F7H/wBHpXFV2fw4YJ8Q/DbEgAatZEk9B+/SgD+mq/8A+PG4/wCuT/yNfy2Xv/H7P/10f+Zr+pmeITwvCTgOpXPpkYr+eb4//s5ePPgdrsj6xEb7RbqVvsmqQKfKfcSQkg58uT/ZPX+EkUAeD6N/yGLL/r4i/wDQhX9Si/dH0r+WvRv+QxZf9fEX/oQr+pRfuj6UAfy9+MP+Rt1j/r/uf/RrVl6Z/wAhK1/67R/+hCtTxh/yNusf9f8Ac/8Ao1q9v/Z7/Zv8d/G/XYrnS4zYaHaTKbrVJ1PlLtIJSIceZJ7DgfxEdwD+hC3/AOPeP/cX+VfzF+P/APke/EH/AGE7z/0c9f08Rp5aKg52gD8q/mG8esH8c6+ykEHU7sgjof3z0AcnRRRQB1+nfD7x5q9nHqOleH9Tu7WYZjmgtJpI3AOMqyoQefQ1+wv7JPh/XtH/AGVta0nVtPurO8eTVttvPC8crb4QFwjAMcngcc1wfwU/aqtPh78D9AsNU8D+Jriz0iy2S6lb2gayZUdsusrMBt55J6Gui/4ePfCf/oA61/3zB/8AHaAPyh/4VZ8Tf+hW1j/wBn/+Irh5oZreZ7e4Ro5I2KOjgqyspwQQeQQeor9lv+Hj3wn/AOgDrX/fMH/x2vyN8b69B4p8Z634mtY2hi1TULq8SNyCyrPK0gVscZAbBxQB9SeBP24/i58P/B+meC9Js9Jms9JgW2geeCQyGNPu7isqgkDjOK8K+MXxh8U/G7xWni/xbHbRXUVtHaIlqhSMRxlmHDMxJJc5Oa7D4Efs1ePvj3dzyeH/ACrDSbNwlzqN1nylcjOxFUZkfHJAwAMZIyM/c9j/AME1PDqwL/aXjK7ebHzGGzjRc+26RjQB8RfBT9qL4h/AnRL7QPCVvYXFrfXAunF5E7ssm0IdpR04IUcHNL8av2o/iH8dtDsvD/i23sLe1sbn7Un2SJ0ZpNhQbi7vwAx4GK+6P+Ha3g3/AKG/UP8AwGi/+Kqtdf8ABNTwy0LCy8ZXqS4+UyWkbLn3AdT+tAH5HUV9OfHv9lb4gfAdItW1J4tW0OeTyk1C1BVUkPRJo25jLduSp6ZzxWb+z5+zf4t/aA1e6h0mePTdK07b9sv5lLqrP92NEGN7kAnGQAOSemQD51r6t+FH7Y3xc+EfhSPwZoxstQ0+3dmtxfxvI8KtyY0ZXT5M8gHOMnHHFfZUf/BNXwiEAl8YX7NjkraxAZ9gWP8AOn/8O1vBv/Q36h/4DRf/ABVAHxX8Xv2tviD8avCR8H+LdN0lbcTx3CTQQOJo3TujNI23IJB45BxXy5HJJFIssTFHQhlZTggjkEEdCK/Xf/h2t4N/6G/UP/AaL/4qvm/XP2P9M0v9o7RvglD4gmey1XT21A3jQL5yBFlJQIG2kkx8HPQ9OOQDz7wb+2f+0D4Ms49Oh11dUtogFRNThW5YAcAeYcSn8XNemp/wUS+NwUBrDRWPc/Z5R/7Wr6E/4dreDf8Aob9Q/wDAaL/4qj/h2t4N/wChv1D/AMBov/iqAPn3/h4n8bP+gdon/fib/wCPUf8ADxP42f8AQO0T/vxN/wDHq+gv+Ha3g3/ob9Q/8Bov/iqP+Ha3g3/ob9Q/8Bov/iqAPmDWP2/vj/qUTQ2UumabuGN9vabnH0MrSD9K+T/GPjrxh8QdXbXfGuq3OrXrDAkuHLbV/uov3UX2UAe1e0+N/wBm7xJpnx5uvgd4DZ9cuo/KeKZ1EIWKSJJWeU5KoqbsFu/YZIFfYHhz/gmqGs0k8W+MClywBaOxtdyKfQPI4LfXaKAPyrr7o0j/AIKBfGjR9KtNJistHkSzgjgV3gl3MI1CgnEoGSBzgAV9Jf8ADtbwb/0N+of+A0X/AMVR/wAO1vBv/Q36h/4DRf8AxVAH5d/Ebx7rfxP8aal468RLEt9qcivKsClI12IqKFBJOAqjqTXE19hftUfsxaX+z3BoN3pOtT6rHrDXEbrPEsbRtAIyCCpIIIf04xVv4F/sV+P/AIxaLD4t1G7i8PaJc828s0ZlnuFBxvjiBXCejMwz1AI5oA+Mq9X+E3xp+IHwV1mXWfAt6IDcqEubeZfMt51Xkb0OOVzwwIYc4PJr9H4v+CavhIIBN4wv2buVtYgPyLn+dSf8O1vBv/Q36h/4DRf/ABVAHz6P+CifxtAAOn6If+2Ev/x6vnz4y/tFfEr45taReNLiFLOxZpILO0j8qFXYYLkEszNjgFmOBnGMnP3dq/8AwTU0s2rHQfGU63AHyi6s1ZCfcpICPyNfnt8Yfgt43+CPiUeHPGcCDzlMlrdQEtBcxg4LIxAOQfvKQCO4wQSAeS0UUUAFFFFABRRRQAUUUUAf/9D8qqKKKACiiigAooooAKUEg5HBFJRQB+jX7M/7cGp+Dza+B/i9NLqGjDbFb6ocyXNoOgEveWIevLqP7w4H6z3Fv4S+InhYw3CWut6Hq0HQ7ZoJ4nHBB5B9iOQfcV/L9X0z+z7+0/43+BGpLawM2p+HJpN1zpkr/KM/ekgY58uT/wAdb+IdCADE+OPgXQvht8f9W8GeGVdNOsb+3+zpI29kWVI5du48kKWIBPOOuTzX9FC/dH0r+cv4w/ELSvir8cb/AMe6JBNbWepXlq0UdxtEoEaRx/MFJAyVJ4Jr+jRfuj6UAfz3/BvwHoHxM/aXtvBvihHk0281O+aeONihdYRLKE3DkBigBxg4zgg81+9ar4S+HfhbaotdE0PSIP8AZht4IkH4AD9SfUmvwF+F3xG0n4TftDr4+1yCa5s9O1DUPNjt9plIlWaIbQxUHBYHkjirn7QH7Tfjj476o0N4503w9BJutdLiY7OOjzNx5knueF/hA6kA9/8A2mP23dW8bG68EfCWWXTtDO6K41EZjubwdCI+hiiP/fbDrtGQfztJzyaKKACiiigD9wNC/wCTAX/7FK6/9Bkr8P6/oH+AOjaD4i/ZU8N6F4oVX0q90VoLtXcxqYXLhwXBBUY75Fch/wAMu/se/wDPnp//AINZP/j9AH4T0V+7H/DLv7Hv/Plp/wD4NZP/AI/X4qePtP0rSPHOv6VoRB0+01K7gtSr+YPIjmZY8Pk7htA5zz1oA/fH9k7w9ZeHP2fPCNtZxhDd2QvZiOrS3LGRifU8gfQCvhr40/t4/E3w18Sdb8K+CLPTYNO0e7lsle5heaWVoGKO5IkUAFgcADgdzX6Dfs5/8kI8E/8AYGtP/RYr8DvjWCPjF4yB4/4nmof+lD0AfS3/AA8I+Pv9zRv/AADf/wCO13Xw2/4KAfFW+8baTpfjGy0y60y+u4baf7PC8MqLM4TejeYwyuc4I56cda/OGun8EgnxnoYH/QRtf/Rq0Af0R/H3w7ZeKfgt4v0e+QOjaTdTLkZ2yQRmWNh7q6Aivmv/AIJ4QQR/A28mjUCSTWrnzCOpIihAz9BX1r8U/wDkmPir/sDX/wD6TvX45/shftSaZ8DpL/wp4zgml0DU5RcLNbrvktbgKFZtmRuR1A3Y5BAIB5oA+sv2of2kvjn8LPiYPC3gHSIZ9LFlDOs0tlNcGSSQtuw6sFwuMYH4185/8NtftUf9AW0/8Fc//wAXX39F+2h+zZLGsh8VIm4Z2taXQI+v7qpP+Gzf2bP+htj/APAW6/8AjNAH573H7cf7T9nEZ7vSrGGNeryabMqj6kyYrw69/al+KWofFmw+Mt01k2tabbG0hjEGLbySrqVKbtxz5jHO7Oa/cP4e/GX4W/GH7da+BNXi1c2KobqPypEKrLkKSsqLkHaRxn3r8qf2+fhF4a+H3jfSfFXhS0jsLbxFFMbi3hUJEtzAy7nRRwu9XGQOMgnvQBV/4eIfHP8A589E/wDAaX/49X2r+x5+0Z48+PNz4ji8Zw2MS6Slq0H2OJ48mYyBt253z9wY6V+HNfqV/wAE0f8Aj98b/wDXPT/5z0Ae7/th/tH+PfgNf+HLbwZDYyrq0V08/wBsieQgwtGF27XTH3znrXxf/wAPEPjn/wA+eif+A0v/AMfr1H/gpd/yF/BH/XDUP/QoK/L2gD9m/wBiHxFqnxW8SePPjP4sSA6zfy2VhmBNiRwxRZKoCSQDhM5JJI5rqv2r/wBo/wCI/wAIdZ0vwv8ADfRUvri7tjd3F1Nby3CRqXKIirGVG47SSSTxjivPf+CbH/Ig+K/+wpD/AOiRX2F8Q/j98JfhVq8Og+PdbXTL24gFzHG0M0m6IsyhsxxsOqkYzmgD8v8A/htr9qj/AKAtp/4K5/8A4uj/AIba/ao/6Atp/wCCuf8A+Lr9Av8Ahs39mz/obY//AAFuv/jNH/DZv7Nn/Q2x/wDgLdf/ABmgD8kPip8ZPip8edf8N+H/AIlwRWawXIjt44rVrb/j6dEdzvJZvugDnAr96b6fTPAng2e6gh22Ohae7pEmBiG0iJCjsPlXAr8o/wBqv4z/AA1+LnxF+HA+HuojUzpt9/pMqwyRBfOng2LmRVJPyMeBgfjX6h/FcE/C7xWByf7Fv/8A0negD8idS/4KH/HC5vZZtOs9HtLdmJjhNvJKUXsC5lG4++B9Ko/8PCPj7/c0b/wDf/47Xw3RQB+v37LH7ZHjv4r/ABJi+H3juzsSt9BNJbXNnG8LJJCpkKsrO4ZWUN0wQcV3f/BQrw9Zan8D4NdlQG50jVLdon7hJw0br9GJUn/dFfn7+w6Cf2kfD+O0V6f/ACWkr9I/29v+TddQ/wCv+x/9G0AfhLRRRQAUUUUAFFFFABRRRQB//9H8qqKKKACiiigAooooAKKKKACuk8G6RbeIPF+i6Dellg1DULW1lKHDBJpVRipORnB44rm60dH1W80LV7PW9PIW5sJ4rmEsNwEkTB1JB6jIHFAH7bW//BP34D21xHcxSaxuidXXN2mMqcj/AJZV9wAYGK/DH/hv/wDaD/576X/4BD/4uj/hv/8AaE/576X/AOAQ/wDi6APvPUP2A/gVqV9cajcyax5tzK8z7btAN0jFjgeV0ya/ErX7CLS9d1DTLclo7W6mhQt1KxuVGffAr7C/4b+/aE/576X/AOAQ/wDi6+ML+9n1K+n1G6Iaa5keWQgYBZyWPHbk0AVaKKKACiiigD9v9C/5MAf/ALFK6/8AQZK/ECvoe3/ai+LVr8Lj8IIbq1Ggmyew2m2QzeRJncvmdc4JGcZr54oAKKKKAP3w/Yp+IekeNfgXo+kW8ynUPDqHT7uDPzoEYmF8ddrx4wemQR2rnPid+wp8L/iT4wvvGh1HUtJutTkM9zFbGJomlb7zqHQlSx5IzjOcYr8XPB/jjxd4A1dde8F6pc6TeqNvm2zlSy/3WHRl9mBHtX01Z/t3ftGWkCwvq1pcFRjfLZQlj9dqqP0oA+yf+Hbfw1/6GbWP++bf/wCN11/gT9gL4VeC/FNh4ouNT1PVn06dLmG3uDEkRljIZC+xAzAMAcZAPfjivhL/AIb3/aJ/5/8AT/8AwBjqvc/t4ftGXELRJqtlCWGN8djDuH03Bh+lAH6qftV/ETSvh38EfENxezrHd6raS6bYxE/PLNcqYztHUhFJZj2A+lfnD+y/+yD4U+Onw/ufGfiDWr6xkjv5LRIbRY9u2NEbcxdWJJL9sYxXxt44+Ivjj4k6oNZ8c6vc6tdKCqNO+VjU8kIgwqD2UCvTvhX+058Wvg3oE3hjwTe28VhNcNcmOe3SYiRlVWIJ5AIUcUAfoX/w7b+Gv/Qzax/3zb//ABuj/h238Nf+hm1j/vm3/wDjdfIP/De/7RP/AD/6f/4Ax0f8N7/tE/8AP/p//gDHQB+onwC/Zj8J/s/XOrXnh7Ur3UZtWSGOQ3flgIsJYgKEVeSW5J9K+Kf+ClHiDTbjW/CPhiGVXvLOC7upkByUSdo1j3DsW8tsewrwi7/bv/aLurd4E1WzgLjHmRWUIdfcbgwz+FfKfiHxHrvi3WbnxD4lvZtQ1C7bfNcTsXdz05J7AcADgDgcUAYtfqV/wTR/4/fG/wD1z0/+c9flrXsHwk+OnxD+CVzf3XgK6hgOppGlws8KzK3lElCA3QjcenrQB9xf8FLv+Qv4I/64ah/6FBX5e1698W/jl8QvjbeWF749uoZ20yOSO3WCFYVUSkFyQvUnaOvpXkNAH6X/APBOb4jaTo/iDX/hzqk6QTawIbuxDnHmSwBlkjX/AGijBgO4U190/Hf9mLwF8fZrHUPEc93Yahp8bQxXNmygmJju2OrqykA5IPBGTX891rdXNlcx3llK8E8LB45I2KOjKchlYYIIPQivqXw7+2r+0V4ds1sU8Qi/jQAKb63inkwPWQqHb6kk0AfcP/Dtv4a/9DNrH/fNv/8AG6P+Hbfw1/6GbWP++bf/AON18g/8N7/tE/8AP/p//gDHR/w3v+0T/wA/+n/+AMdAFn9qD9nHQ/2a7jwvrnhbVrvUWvriZit2qAo9qY3UqUC8HdyCO3Wv2S8E+LPDXxZ8AWXiTTHjvNN1q0xKmcgeYu2WFx2ZSSrCv5/vi58fviT8bl0+Px7dwzx6WZTbpBAkIDTbd5O3kkhR1PFYfw7+MvxN+FM0kvgLXLnTUmYNLApEkEhHdopAyE474z70AfqbqX/BOL4UXV7LcWGu6xZwOxKQgwyBAf4QzR7iB781S/4dt/DX/oZtY/75t/8A43Xx9H+3p+0UiBW1Gwcju1jFk/lgU/8A4b3/AGif+f8A0/8A8AY6AP0p+CP7IHw6+B/iV/F+k3l9qmp+S8EUl4yBYUk4cqkaL8xHGSTwT614l/wUU+Imk2HgHTPhrBOr6nqd4l7NEpy0dtbhsMw7b5CNueu0+lfF2rftyftGaratarrkFmHGC9tZwo/4MVYj8K+W9c13WvE2qT634hvZ9Qvrlt8txcO0kjn3ZiT9PSgDJooooAKKKKACiiigAooooA//0vyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9P8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//U/KqiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/1fyqooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9b8qqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z" alt="The Iron Osteo"></a><a class="nav-back" href="/blog.html">Field Notes</a></nav>
+
+<article>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="tag-line"><span>Back Pain / Pelvic Mechanics</span></div>
+      <h1>Your Pelvis Isn't Out Of Place</h1>
+      <p class="intro">You've been clicked, released and 'realigned'. It worked — and then it 'wore off'.</p>
+      <p class="meta">Field Notes &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; 6 min read</p>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="body-inner">
+
+      <p>That's the part that confuses people. The joint moved, the pain eased, you walked out feeling looser than you had in weeks, and then somewhere around day five it started creeping back in. Nobody did anything wrong. Something just put the pattern back.</p>
+
+      <p>Worth knowing what, because it changes what you do between appointments.</p>
+
+      <h2>You Are Already Asymmetrical</h2>
+
+      <p>In 2010 a group in Utrecht put thirty healthy volunteers in an MRI scanner and measured the rotation of their spines. No back pain, no pathology, average age twenty-three.</p>
+
+      <p>Their mid and lower thoracic vertebrae were rotated to the right — not one or two of them, the group, around two and a half degrees at T7 and T8, all in the same direction. Then they scanned the same people on hands and knees and the rotation halved.</p>
+
+      <p>So it isn't damage and it isn't a fault. It's what a human spine does when it stands upright, carrying a liver on one side and a diaphragm that doesn't attach evenly to the other. You have it. I have it. The people who've never had a day of back pain have it too.</p>
+
+      <h2>Being Asymmetrical Isn't The Problem. Being Stuck Is.</h2>
+
+      <p>This is the bit that gets missed.</p>
+
+      <p>A system that copes sits in an asymmetrical position and can leave it. It shifts. It loads one side, then the other, finds a different arrangement when the task asks for one and comes back when it's finished. The asymmetry is a starting point, not an address.</p>
+
+      <p>When you're told your pelvis is out of place, or that you have an upslip or a downslip, what's being described is a position. Positions aren't the problem. Not being able to leave one is.</p>
+
+      <h2>Where Your COM Sits Decides How You Move</h2>
+
+      <p>To change position you have to move your centre of mass over your base of support. Your weight has to be able to travel somewhere else relative to your feet, and the joints have to allow it when it goes.</p>
+
+      <p>When your centre of mass sits at the edge of that base, or outside it, everything above has to work to keep you upright. The system stops adapting and starts bracing. And the small movements it depends on quietly disappear — the sacroiliac joint glides through millimetres, not degrees, and those millimetres are how load gets shared between your leg and your spine. Take away the spare capacity to make them and they stop happening.</p>
+
+      <p>That's the moment a normal asymmetry turns into a position you can't shift away from.</p>
+
+      <h2>When It Holds, And When It Doesn't</h2>
+
+      <p>Hands-on work is better than its critics admit. Cochrane's 2021 review runs to 249 randomised trials, and against exercise manual therapy came out level — 1.0 points on a 100-point pain scale, confidence interval −3.1 to 5.1. Not worse. Equivalent.</p>
+
+      <p>Sometimes it's the whole job. Some people get released once, the pain goes, it stays gone — the joint access was the missing piece and the rest of the system took it from there. That happens more than the sceptics admit. Where it doesn't stick is where nothing else changed. A release restores movement to a joint that's been held still and hasn't had an up or downstream effect.</p>
+
+      <p>Prevention says the same from the other end. Steffens pooled 21 trials and 30,850 people: exercise alone stops protecting past twelve months — risk ratio 1.04, no effect — while exercise paired with understanding what you're doing still holds at 0.73. Both rest on two trials apiece, graded low quality, so take the direction not the decimal. Whatever changes things has to keep happening, and you have to know why.</p>
+
+      <p>So the smart move was never choosing between them. It's the release, and then the work — and in particular the right work — that makes it worth having. Bear in mind the right type of exercise matters for the individual: any old exercise, or exercise with the wrong progression or load, can take someone the other way.</p>
+
+      <h2>Stand On One Leg</h2>
+
+      <p>Barefoot, feet hip-width apart, no wall.</p>
+
+      <p>Move your weight across onto the right foot until the left one comes off the floor by a centimetre. Don't push off with the left leg and don't rush it — what matters is the weight travelling, not the foot lifting. Hold twenty seconds. Then the other side.</p>
+
+      <p>You're not testing balance. You're testing what you had to do to get there. A hip that hikes on the standing side, a ribcage that swings out past the foot, toes clawing, a knee drifting in — every one of those is borrowed. You didn't get your weight over the foot. You threw something else out to meet it halfway.</p>
+
+      <p>Most people have one side that just goes and one side that negotiates. If the difference is obvious within a second or two, that's the thing your pelvis has been organised around. Where is your COM taking you?</p>
+
+      <h2>The Training Is Also A Variable</h2>
+
+      <p>The exercise isn't automatically the answer — it's another input, and it can be the thing closing the window rather than holding it open.</p>
+
+      <p>Load a position you can't get your weight out of and you aren't filling the gap the treatment left. You're feeding it. Sets go in the log, the weight goes up, and the whole time you're rehearsing the arrangement you paid someone to change. That could be the interference putting you back.</p>
+
+      <p>Which one it is depends on the exercise, the load, and where you are in the process. Something that's exactly right in a fortnight can be the wrong thing today, and it changes again the moment you can get your weight somewhere new, because the shape you're working with has moved. That's what progressions are for. "I'm doing my exercises" and "my exercises are doing something" were never the same sentence.</p>
+
+      <p>It runs the other way too. Sometimes a cue is the whole intervention — change where someone puts their weight in a movement they were already doing and the pain can go inside a set. Which is why I think anyone working hands-on needs to understand exercise biomechanics properly. If you can't see what a lift is asking of somebody, you can treat them all day and never touch the thing that's loading them.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>An upslip or a downslip of a pelvis isn't a fault. It's what a particular build or pelvic shape does under forces every one of us carries.</p>
+
+      <p>Manipulating it back without changing those forces is pushing a door closed without removing what's wedging it open. Change the forces and it stops needing to be put back.</p>
+
+      <p>For some, having had the adjustments monthly for years with the same outcome tells you something on its own. It wasn't the click that failed them — it's that nothing followed it, or the wrong thing did.</p>
+
+      <p>Change the pressure. Restore the hip range. You're not training the pelvis into a position — you're training it to move between them again.</p>
+
+      <h2>References</h2>
+
+      <p class="ref">Janssen MMA, Kouwenhoven JW, Castelein RM, et al. Pre-existent vertebral rotation in the human spine is influenced by body position. <em>European Spine Journal</em>. 2010;19(10):1728–1734.</p>
+
+      <p class="ref">Hayden JA, Ellis J, Ogilvie R, Malmivaara A, van Tulder MW. Exercise therapy for chronic low back pain. <em>Cochrane Database of Systematic Reviews</em>. 2021;9(9):CD009790.</p>
+
+      <p class="ref">Steffens D, Maher CG, Pereira LSM, et al. Prevention of low back pain: a systematic review and meta-analysis. <em>JAMA Internal Medicine</em>. 2016;176(2):199–208.</p>
+
+      <p class="bio"><em>Luke Sanders is an osteopath and strength coach based in London. He works with lifters, athletes and people who want to train without paying for it later.</em></p>
+
+    </div>
+  </div>
+</article>
+
+<section class="qa">
+  <div class="qa-inner">
+    <div class="qa-tag"><span class="line"></span>Questions &amp; Answers</div>
+    <h2>Common Questions</h2>
+
+    <div class="qa-item">
+      <button class="qa-q">My back felt great after the adjustment and then it came back — was it done wrong?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Probably not. Across 249 randomised trials, manual therapy performed <strong>equivalently to exercise</strong>, the best-evidenced treatment there is — and for some people one session is genuinely the end of it. Where it doesn't hold, it's because moving the joint didn't change where your weight sits. Get the treatment. Then do the part that makes it last.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Isn't being asymmetrical the problem?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">No. Thirty healthy people with no back pain went in an MRI scanner and their mid-thoracic spines were <strong>all rotated the same way</strong>. Asymmetry is the normal human starting position, and it reduced when the same people were scanned on hands and knees — it's what standing up does to us. The problem was never the shape. It's whether you can move out of it and back.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">What does centre of mass have to do with my back?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Everything, if you can't manage it. To leave a position your weight has to be able to travel somewhere else over your feet. Sitting at the edge of your base, or outside it, means everything above is working to keep you upright — and <strong>the small joint movements stop happening</strong> because there's nothing spare to make them with. Millimetres at the sacroiliac joint are how load gets shared. Lose them and the load goes somewhere it shouldn't.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">Should I be stretching or strengthening to hold it in place?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Neither, if the aim is holding a position. Strengthening into the orientation you're already stuck in reinforces it, and in the pattern where the sacrum tips back the lower glute is <strong>already switched on</strong> — holding, not producing movement. Load that harder and you train the hold. The orientation has to change before the load does.</div></div>
+    </div>
+
+    <div class="qa-item">
+      <button class="qa-q">So what actually makes it stick?<span class="qa-icon"></span></button>
+      <div class="qa-a"><div class="qa-a-inner">Book the session, then train the days after it — but not just anything. Loading a position you still can't get your weight out of doesn't fill the gap, it feeds it. <strong>The training has to be built around where you can put your centre of mass over your base of support</strong>, at the stage you're actually at, and it has to change as you do. Right exercise, right load, right time. That's a different thing from doing something.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-cta">
+  <p>Want to know what's actually limiting your movement? Book a clinical assessment — we find the root and fix it.</p>
+  <a href="https://theironosteo.com">Book Now</a>
+</div>
+
+<footer class="site-foot">
+  <span>© 2025 theironosteo.com</span>
+  <span>·</span>
+  <a href="/blog.html">Field Notes</a>
+  <span>·</span>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<!-- Iron Osteo cookie consent banner -->
+<style>
+  #io-cookie-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111111;color:#F5F5F0;padding:16px 20px;padding-bottom:calc(16px + env(safe-area-inset-bottom));font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.5;border-top:2px solid #C9A84C;box-shadow:0 -2px 12px rgba(0,0,0,0.3)}
+  #io-cookie-banner .io-cb-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  #io-cookie-banner p{margin:0;flex:1;min-width:200px}
+  #io-cookie-banner a{color:#C9A84C;text-decoration:underline}
+  #io-cookie-banner .io-cb-btns{display:flex;gap:8px;flex-shrink:0}
+  #io-cookie-banner button{font-family:'Rajdhani',Arial,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;cursor:pointer;border-radius:2px;padding:9px 16px;font-size:13px}
+  #io-cookie-decline{background:transparent;color:#F5F5F0;border:1px solid #F5F5F0}
+  #io-cookie-accept{background:#C9A84C;color:#111111;border:none}
+  @media(max-width:600px){
+    #io-cookie-banner{padding:14px 16px;padding-bottom:calc(14px + env(safe-area-inset-bottom));font-size:12.5px}
+    #io-cookie-banner .io-cb-inner{flex-direction:column;align-items:stretch;gap:12px}
+    #io-cookie-banner p{min-width:0}
+    #io-cookie-banner .io-cb-btns{width:100%}
+    #io-cookie-banner button{flex:1;padding:11px 12px}
+  }
+</style>
+<div id="io-cookie-banner">
+  <div class="io-cb-inner">
+    <p>
+      We use cookies to improve your experience and understand how the site is used. By continuing, you agree to our use of cookies.
+      <a href="/privacy-policy.html">Learn more</a>
+    </p>
+    <div class="io-cb-btns">
+      <button id="io-cookie-decline">Decline</button>
+      <button id="io-cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var COOKIE_NAME = 'io_cookie_consent';
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/; SameSite=Lax';
+  }
+
+  var consent = getCookie(COOKIE_NAME);
+  var banner = document.getElementById('io-cookie-banner');
+
+  if (!consent && banner) {
+    banner.style.display = 'block';
+  }
+
+  var acceptBtn = document.getElementById('io-cookie-accept');
+  var declineBtn = document.getElementById('io-cookie-decline');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'accepted', 180);
+      banner.style.display = 'none';
+      if (typeof window.dispatchEvent === 'function') {
+        window.dispatchEvent(new Event('io-cookie-accepted'));
+      }
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'declined', 180);
+      banner.style.display = 'none';
+    });
+  }
+})();
+</script>
+<script>
+(function () {
+  var items = document.querySelectorAll('.qa-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.qa-q');
+    var ans = item.querySelector('.qa-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.qa-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
